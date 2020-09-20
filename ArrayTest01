@@ -1,0 +1,29 @@
+package com.yang.exer;
+
+public class ArrayTest {
+
+	public static void main(String[] args) {
+		int arr[] = new int[5];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int)(Math.random()*30);
+			boolean flag = false;
+			while(true) {
+				for (int j = 0; j < i; j++) {
+					if(arr[i] == arr[j]) {
+						flag = true;
+						break;
+					}
+				}
+				if(flag) {
+					arr[i] = (int)(Math.random()*30+1);
+					flag = false;
+					continue;
+				}break;
+				
+			}
+			System.out.println(arr[i]);
+			
+		}
+	}
+	
+}
